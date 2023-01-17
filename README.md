@@ -83,7 +83,7 @@ demo.sh을 이용하여 결과물을 추출한뒤 평가 데이터를 이용하�
 
 평가함수는 evaluation(y_true, y_pred) 함수를 이용하면 되고, 입력 데이터는 아래와 같습니다.
 
-모델을 이용하여 pred_data와 같은 형태의 데이터를 만들기 위한 방법은 predict_from_korean_form(tokenizer, ce_model, pc_model, data) 함수를 참고하면 됩니다. 이 함수의 경우 두 개의 모델을 pipieline으로 연결하여 입력으로부터 결과를 얻어 출력과 같은 모양으로 만들어 줍니다.
+모델을 이용하여 pred_data와 같은 형태의 데이터를 만들기 위한 방법은 demo.sh 파일을 참고하면 됩니다.
 
 true_data
 ``` 
