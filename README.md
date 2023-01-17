@@ -1,12 +1,14 @@
 # korean_AU_baseline
 
 본 소스코드는 '국립국어원 상시평가'의 비윤리적 문장 분류의 베이스라인 모델 및 학습과 평가를 위한 코드를 제공하고 있습니다. 
+
 코드는 'au_main.py'이고, 'train.sh' 을 이용하면 학습에 용이하고, 학습된 모델을 이용하여 'demo.sh'를 이용하여 결과를 생성 한 뒤 'test.sh'를 실행하여 결과물에 대한 평가를 할 수 있습니다.
 
 
 
 ## 데이터
 데이터는 국립국어원 모두의 말뭉치에서 다운받으실 수 있습니다. https://corpus.korean.go.kr/
+
 데이터는 ['&name&', '&affiliation&', '&social-security-num&', '&tel-num&', '&card-num&', '&bank-account&', '&num&', '&online-account&'] 들로 비식별화가 돼있습니다.
 
 #### example
@@ -40,13 +42,15 @@
 ## 모델 구성
 
 xlm-roberta-base(https://huggingface.co/xlm-roberta-base)를 기반으로 학습하였습니다.
-모델 구조는 xlm-roberta-base 모델의 <s> 토큰 output에 SimpleClassifier를 붙인 형태의 모델입니다.
+
+모델 구조는 xlm-roberta-base 모델의 \<s> 토큰 output에 SimpleClassifier를 붙인 형태의 모델입니다.
 
 학습된 baseline 모델은 아래 링크에서 받으실 수 있습니다.
 
 model link: https://drive.google.com/file/d/1ZVZrLtFJrx6I0NpFpPNWdFi0Z9cYB6-6/view?usp=share_link
 
 모델 입력형태를 \<s>발화 form</s>와 같이하고, 비윤리적 표현인지에 대해 0, 1로 이진 분류를 합니다.
+
 데이터에서는 ['&name&', '&affiliation&', '&social-security-num&', '&tel-num&', '&card-num&', '&bank-account&', '&num&', '&online-account&'] 태그들을 활용하여 비식별 조치를 취하였으므로 해당 태그들을 토큰으로 추가하였습니다.
 
 
@@ -72,7 +76,9 @@ model link: https://drive.google.com/file/d/1ZVZrLtFJrx6I0NpFpPNWdFi0Z9cYB6-6/vi
 
 ### 평가
 baseline 코드에서 제공된 평가 코드로 평가하였을때, 아래와 같이 결과가 나왔습니다.
+
 train 과정에서 --do_eval을 argument로 전달하면 매 epoch마다 dev data에 대해 평가 결과를 보여줍니다.
+
 demo.sh을 이용하여 결과물을 추출한뒤 평가 데이터를 이용하여 test.sh와 같이 평가할 수 있습니다.
 
 평가함수는 evaluation(y_true, y_pred) 함수를 이용하면 되고, 입력 데이터는 아래와 같습니다.
