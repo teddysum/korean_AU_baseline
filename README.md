@@ -53,7 +53,7 @@ model link: https://drive.google.com/file/d/1ZVZrLtFJrx6I0NpFpPNWdFi0Z9cYB6-6/vi
 데이터에서는 ['&name&', '&affiliation&', '&social-security-num&', '&tel-num&', '&card-num&', '&bank-account&', '&num&', '&online-account&'] 태그들을 활용하여 비식별 조치를 취하였으므로 해당 태그들을 토큰으로 추가하였습니다.
 
 
-####입력 예시
+#### 입력 예시
 ```
 <s>보여주면서 왜 엿보냐고 비난 하는것도 웃기지만. 훔쳐 보면서 왜 보여주냐고 하는 사람 역시 우습다..</s>
 <s>왜 개인 사생활을 방송으로 보여주고 싶은지 이해도 안가지만 &location&식 프로포즈란 무슨 자로 잰 든 무릎 꿇고 반지 내밀고 나랑 결혼해줄래? 가 전부이다.</s>
@@ -63,7 +63,7 @@ model link: https://drive.google.com/file/d/1ZVZrLtFJrx6I0NpFpPNWdFi0Z9cYB6-6/vi
 ...
 ```
 
-출력 예시 - 0 or 1 (윤리 or 비윤리)
+#### 출력 예시 - 0 or 1 (윤리 or 비윤리)
 ```
 1
 1
