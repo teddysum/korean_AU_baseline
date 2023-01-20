@@ -6,7 +6,7 @@
 
 
 ## 데이터
-데이터는 국립국어원 '모두의 말뭉치(https:// corpus.korean.go.kr)'에서 다운 받으실 수 있습니다.
+데이터는 국립국어원 '모두의 말뭉치( https://corpus.korean.go.kr )'에서 다운 받으실 수 있습니다.
 
 데이터의 개인 정보는 '&name&', '&affiliation&', '&social-security-num&', '&tel-num&', '&card-num&', '&bank-account&', '&num&', '&online-account&'로 비식별화 되어 있습니다.
 
@@ -40,7 +40,7 @@
 
 ## 모델 구성
 
-xlm-roberta-base(https://huggingface.co/xlm-roberta-base)를 기반으로 학습하였습니다.
+xlm-roberta-base( https://huggingface.co/xlm-roberta-base )를 기반으로 학습하였습니다.
 
 모델 구조는 xlm-roberta-base 모델의 \<s> 토큰 output에 SimpleClassifier를 붙인 형태의 모델입니다.
 
