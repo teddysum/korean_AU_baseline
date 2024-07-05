@@ -6,7 +6,7 @@
 
 
 ## 데이터
-데이터는 국립국어원 '모두의 말뭉치( https://corpus.korean.go.kr )'에서 다운 받으실 수 있습니다.
+평가에 사용되는 데이터는 참가 신청 후 각 과제 페이지 '자료 받기'에서 받으실 수 있습니다.
 
 데이터의 개인 정보는 '&name&', '&affiliation&', '&social-security-num&', '&tel-num&', '&card-num&', '&bank-account&', '&num&', '&online-account&'로 비식별화 되어 있습니다.
 
@@ -112,6 +112,6 @@ pred_data
 ## reference
 xlm-roberta-base in huggingface (https://huggingface.co/xlm-roberta-base)
 
-인공지능(AI)말평(kli.korean.go.kr/benchmark)
+인공지능(AI)말평([kli.korean.go.kr/benchmark](https://kli.korean.go.kr/benchmark/home.do))
 ## Authors
 - 정용빈, Teddysum, ybjeong@teddysum.ai
